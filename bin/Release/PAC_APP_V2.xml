@@ -1,0 +1,758 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PAC_APP_V2</name>
+    </assembly>
+    <members>
+        <member name="F:PAC_APP_V2.Controls.CustomTextBox.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.Controls.CustomTextBox.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.Controls.CustomTextBox.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSet.plantsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSet.plantsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSet.plantsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(PAC_APP_V2.gardenguardian_databaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(PAC_APP_V2.gardenguardian_databaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(PAC_APP_V2.gardenguardian_databaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.UpdateAll(PAC_APP_V2.gardenguardian_databaseDataSet)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.MainForm">
+            <summary>
+            Classe principale du programme
+                Gestion du menu
+                Communication série
+                Communication IPC
+                Post traitement
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.MainForm.Home">
+            <summary>
+            Contrôle utilisateur d'accueil (vide)
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.MainForm.Plants">
+            <summary>
+            Contrôle utilisateur de gestion des plantes (communication BDD)
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.MainForm.Calendar">
+            <summary>
+            Contrôle utilisateur d'affichage de la planification d'arrosage
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.MainForm.Forecast">
+            <summary>
+            Contrôle utilisateur d'affichage des prévisions météo
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.MainForm.Settings">
+            <summary>
+            Contrôle utilisateur de gestion des machines connectées
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.#ctor">
+            <summary>
+            Fenêtre principale du projet
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.MainForm_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Délégué appelé une fois la fenêtre principale visible
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.menuBUT_home_Click(System.Object,System.EventArgs)">
+            <summary>
+            Délégué appelé lors d'un clic sur le bouton menuBUT_Home
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.menuBUT_exit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Bouton de sortie du programme
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.toolStripBUT_Licence_Click(System.Object,System.EventArgs)">
+            <summary>
+            Appui sur le bouton licence
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.MainForm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Délégué appelé à la fin du programme
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PAC_APP_V2.MainForm.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.MainForm.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.add">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.airport">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.cancel">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Checkmark">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.copyright">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.cross_small">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.database">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.delete">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.disk">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Document_noHalo_16x">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.GardenGuardianNeonLogo">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.home">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.ICO_FBT">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.id_badge">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.left_arrow">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.logoProjetV21">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.logoProjetV3">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.map_marker">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.menu_dots_vertical">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.option">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.paper_plane">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.reload">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.right_arrow">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.settings">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.stats">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Time">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.user">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wcalendar">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wcopyright">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wcross_small">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wdatabase">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Whome">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wmenu_dots_vertical">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wmonitor">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.WOpenCV_Logo">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wpaper_plane">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wpause">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wplant">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wplay">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wplug">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.write">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wsettings">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wsign_out">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wstats">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wunplugged">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wuser">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:PAC_APP_V2.Properties.Resources.Wweather">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.CalendarUserControl.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.CalendarUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.CalendarUserControl.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.ForecastUserControl.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.ForecastUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.ForecastUserControl.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.HomeUserControl.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.HomeUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.HomeUserControl.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.NewPlantForm.BUT_Insert_Click(System.Object,System.EventArgs)">
+            <summary>
+            Délégué appelé lors d'un clic sur le bouton "Enregistrer"
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.NewPlantForm.BUT_Browse_Click(System.Object,System.EventArgs)">
+            <summary>
+            Délégué appelé lors d'un clic sur le bouton "Parcourir"
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.NewPlantForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.NewPlantForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.NewPlantForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantCard.#ctor(System.Data.DataRow)">
+            <summary>
+            Constructeur de la carte de la plante
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.PlantCard.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantCard.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantCard.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.UserControls.PlantUserControl">
+            <summary>
+            Panneau de visualisation des plantes enregistrées
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.#ctor">
+            <summary>
+            Constructeur du panneau
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.TSBUT_Add_Click(System.Object,System.EventArgs)">
+            <summary>
+            Délégué appelé lors d'un clic sur le bouton "TS_BUT_Add
+            Ouvre le formulaire d'ajout de plante
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.PlantUserControl_Load(System.Object,System.EventArgs)">
+            <summary>
+            Délégué appelé lors du chargement du formulaire
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.reLoad">
+            <summary>
+            Mise à jour du contrôle avec les informations de la base de données
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.destroyPlantCard(System.Object,System.EventArgs)">
+            <summary>
+            Détruit la carte plante qui à déclenché l'évenement
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.PlantUserControl.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.PlantUserControl.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.UserControls.SettingsUserControl.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.SettingsUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:PAC_APP_V2.UserControls.SettingsUserControl.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.Utilities.ErrorType">
+            <summary>
+            Type d'erreur disponibles lors d'un log.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.ErrorType.Error">
+            <summary>
+            Lorsqu'une erreur est survenue.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.ErrorType.Warning">
+            <summary>
+            Lorsqu'un évènement non critique se produit mais qu'il est tout de même nécessaire d'être informé.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.ErrorType.Info">
+            <summary>
+            Utilisé pour debugguer, afficher de simples messages dans le fichier de logs.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.ErrorType.FunctionCall">
+            <summary>
+            Utilisé pour afficher un appel de fonction.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.ErrorType.DllCall">
+            <summary>
+            Utilisé pour afficher l'appel d'une fonction DLL.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.ErrorType.Success">
+            <summary>
+            Utilisé lors du succès d'une action.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.Error.ErrorOccured">
+            <summary>
+            Permet d'indiquer si une erreur est survenue ou non, si une fonction a la possibilité de retourner une erreur, mettre cette variable à false
+            au début de la fonction.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.Error.ErrorName">
+            <summary>
+            Nom de l'erreur, quand une erreur survient, mettre cette variable à la valeur de Message.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.Error.ErrorDescription">
+            <summary>
+            Contenu de l'erreur, quand une erreur survient, mettre cette variable à l'erreur.ToString().
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.Error._logsFilePath">
+            <summary>
+            Chemin du dossier contenant les fichiers logs, par défaut ils sont dans un dossier appelé "logs" dans le dossier courant de
+            l'exécutable.
+            </summary>
+        </member>
+        <member name="F:PAC_APP_V2.Utilities.Error._logsFile">
+            <summary>
+            Flux de données du fichier log constamment ouvert durant l'exécution du programme. Permet d'écrire dans le fichier.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.Error.#cctor">
+            <summary>
+            Cette fonction sera automatiquement appelée la 1ère fois que le programme aura besoin de cette classe.
+            C'est comme un constructeur mais pour une classe statique.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.Error.destructor(System.Object,System.EventArgs)">
+            <summary>
+            Cette fonction est automatiquement appelée dès que le programme s'arrête.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.Error.showErrorBox">
+            <summary>
+            Affiche un MessageBox avec le contenu de l'erreur.
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.Error.log(PAC_APP_V2.Utilities.ErrorType,System.String)">
+            <summary>
+            Ajoute une entrée dans le fichier log.
+            </summary>
+            <param name="type">Type d'erreur à logguer.</param>
+            <param name="value">Chaîne de caractères à ajouter au fichier log. Le saut de ligne se fait automatiquement.</param>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.Error.logError">
+            <summary>
+            Permet de logguer la dernière erreur survenue avec la liste des fonctions appelées jusqu'à la dite erreur. Permet d'avoir une trace complète
+            sur l'erreur.
+            </summary>
+        </member>
+        <member name="T:PAC_APP_V2.Utilities.IniFile">
+            <summary>
+            Classe relative à l'utilisation de fichiers ini
+            </summary>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.IniFile.#ctor(System.String)">
+            <summary>
+            Initialise le fichier 
+            </summary>
+            <param name="IniPath"> Chemin du fichier créé, si null utilise [nom de l'exécutable].ini</param>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.IniFile.Read(System.String,System.String)">
+            <summary>
+            Récupère la valeur d'un champ donné
+            </summary>
+            <param name="Key">Nom du champ</param>
+            <param name="Section">Optionnel : Nom de section (par défaut la section portera le nom du programme)</param>
+            <returns></returns>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.IniFile.Write(System.String,System.String,System.String)">
+            <summary>
+            Écrit une valeur dans le fichier
+            </summary>
+            <param name="Key">Nom du champ</param>
+            <param name="Value">Valeur du champ</param>
+            <param name="Section">Optionnel : Nom de section (par défaut la section portera le nom du programme)</param>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.IniFile.DeleteKey(System.String,System.String)">
+            <summary>
+            Permet de supprimer une entrée existante
+            </summary>
+            <param name="Key"></param>
+            <param name="Section"></param>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.IniFile.DeleteSection(System.String)">
+            <summary>
+            Permet de supprimer une section existante
+            </summary>
+            <param name="Section"></param>
+        </member>
+        <member name="M:PAC_APP_V2.Utilities.IniFile.KeyExists(System.String,System.String)">
+            <summary>
+            Permet de vérifier l'existance d'une entrée
+            </summary>
+            <param name="Key"></param>
+            <param name="Section"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PAC_APP_V2.Utilities.Constants">
+            <summary>
+            Classe regroupant les constantes du programme en général
+            </summary>
+        </member>
+    </members>
+</doc>

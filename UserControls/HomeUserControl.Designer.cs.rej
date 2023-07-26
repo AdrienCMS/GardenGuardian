@@ -1,0 +1,11 @@
+diff a/UserControls/HomeUserControl.Designer.cs b/UserControls/HomeUserControl.Designer.cs	(rejected hunks)
+@@ -65,8 +65,8 @@
+             this.BackColor = System.Drawing.Color.White;
+             this.BackgroundImage = global::PAC_APP_V2.Properties.Resources.night;
+             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
++            this.Controls.Add(this.panel1);
+             this.Controls.Add(this.contactLabel);
+-            this.Controls.Add(this.panel2);
+             this.Name = "HomeUserControl";
+             this.Size = new System.Drawing.Size(1009, 565);
+             this.ResumeLayout(false);
