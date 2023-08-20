@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace PAC_APP_V2 {
+namespace GardenGuardian {
     
     
     /// <summary>
@@ -808,7 +808,7 @@ namespace PAC_APP_V2 {
         }
     }
 }
-namespace PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters {
+namespace GardenGuardian.gardenguardian_databaseDataSetTableAdapters {
     
     
     /// <summary>
@@ -1224,7 +1224,7 @@ namespace PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::PAC_APP_V2.Properties.Settings.Default.gardenguardian_databaseConnectionString;
+            this._connection.ConnectionString = global::GardenGuardian.Properties.Settings.Default.gardenguardian_databaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

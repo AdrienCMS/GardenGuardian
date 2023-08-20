@@ -14,5 +14,5 @@ create table plants(
     primary key(id)
 					);
 
-INSERT INTO plants VALUES ('Hortensia',2,'WEEK',21/05/2023,'C:\Users\adrie\Pictures\Plants\hortensia.png');
-INSERT INTO plants VALUES ('Tulipe',	0,	'WEEK',	21/06/2023,	'C:\Users\adrie\Pictures\Plants\Tulipe.png');
+INSERT INTO plants (plant_name,plant_schedule,plant_weekMonth,plant_lastWatering,plant_imagePath) VALUES ('Hortensia',2,'WEEK','2023-05-21','C:\\Users\\adrie\\Pictures\\Plants\\hortensia.png');
+INSERT INTO plants (plant_name,plant_schedule,plant_weekMonth,plant_lastWatering,plant_imagePath) VALUES('Tulipe',	0,	'WEEK',	'2023-05-25',	'C:\\Users\\adrie\\Pictures\\Plants\\Tulipe.png');

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PAC_APP_V2.UserControls
+namespace GardenGuardian.UserControls
 {
     public partial class PlantCard : UserControl
     {

@@ -6,11 +6,11 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace PAC_APP_V2.Controls
+namespace GardenGuardian.Controls
 {
     class MenuButton : System.Windows.Forms.Button
     {
-        private Image logo = PAC_APP_V2.Properties.Resources.cross_small;
+        private Image logo = GardenGuardian.Properties.Resources.cross_small;
         private Color GardenGLight = Color.FromArgb(14, 84, 46);
         private static Color FBDarker = Color.FromArgb(22,168,88);
 

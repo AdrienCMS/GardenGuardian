@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PAC_APP_V2.Controls
+namespace GardenGuardian.Controls
 {
     public partial class CustomTextBox : System.Windows.Forms.TextBox
     {

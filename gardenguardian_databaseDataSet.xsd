@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gardenguardian_databaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gardenguardian_databaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PAC_APP_V2.Properties.Settings.GlobalReference.Default.gardenguardian_databaseConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gardenguardian_databaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gardenguardian_databaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GardenGuardiant.Properties.Settings.GlobalReference.Default.gardenguardian_databaseConnectionString" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="plantsTableAdapter" GeneratorDataComponentClassName="plantsTableAdapter" Name="plants" UserDataComponentName="plantsTableAdapter">
@@ -116,7 +116,7 @@ VALUES        (@plantName, @schedule, @weekMonth, @lastWatering, @imagePath)</Co
   <xs:element name="gardenguardian_databaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="gardenguardian_databaseDataSet" msprop:Generator_UserDSName="gardenguardian_databaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="plants" msprop:Generator_TableClassName="plantsDataTable" msprop:Generator_TableVarName="tableplants" msprop:Generator_RowChangedName="plantsRowChanged" msprop:Generator_TablePropName="plants" msprop:Generator_RowDeletingName="plantsRowDeleting" msprop:Generator_RowChangingName="plantsRowChanging" msprop:Generator_RowEvHandlerName="plantsRowChangeEventHandler" msprop:Generator_RowDeletedName="plantsRowDeleted" msprop:Generator_RowClassName="plantsRow" msprop:Generator_UserTableName="plants" msprop:Generator_RowEvArgName="plantsRowChangeEvent">
+        <xs:element name="plants" msprop:Generator_TableClassName="plantsDataTable" msprop:Generator_TableVarName="tableplants" msprop:Generator_TablePropName="plants" msprop:Generator_RowDeletingName="plantsRowDeleting" msprop:Generator_RowChangingName="plantsRowChanging" msprop:Generator_RowEvHandlerName="plantsRowChangeEventHandler" msprop:Generator_RowDeletedName="plantsRowDeleted" msprop:Generator_UserTableName="plants" msprop:Generator_RowChangedName="plantsRowChanged" msprop:Generator_RowEvArgName="plantsRowChangeEvent" msprop:Generator_RowClassName="plantsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

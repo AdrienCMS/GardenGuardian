@@ -10,12 +10,11 @@ using System.Threading;
 using System.Web;
 using WinSCP;
 using System.Windows.Forms;
-using PAC_APP_V2.Controls;
-using PAC_APP_V2.Utilities;
-using static PAC_APP_V2.Utilities.Constants;
-using static PAC_APP_V2.Utilities.Error;
+using GardenGuardian.Controls;
+using GardenGuardian.Utilities;
+using static GardenGuardian.Utilities.Error;
 
-namespace PAC_APP_V2
+namespace GardenGuardian
 {
     /// <summary>
     /// Classe principale du programme
@@ -64,10 +63,7 @@ namespace PAC_APP_V2
 
         /*Apparence*/
         Color BackgroundColor = Color.FromArgb(48, 48, 45);
-        static public Font generalFont = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-        /*Gestion de fichiers*/
-        IniFile pacappIni = new IniFile(PROJECT_DATA_REPERTORY + @"\PACAPP.ini");
+        static public Font generalFont = new System.Drawing.Font("Microsoft YaHei UI", 12F);
 
         /// <summary>
         /// Fenêtre principale du projet
@@ -136,23 +132,6 @@ namespace PAC_APP_V2
                 currentButton.BackColor = currentButton.lineColor;
 
                 currentControl = Plants;
-                currentControl.Dock = DockStyle.Fill;
-
-                mainPanel.Controls.Add(currentControl);
-            }
-        }
-
-        private void menuBUT_Calendar_Click(object sender, EventArgs e)
-        {
-            if (currentControl.Name != "CalendarUserControl")
-            {
-                mainPanel.Controls.Remove(currentControl);
-
-                currentButton.BackColor = BackgroundColor;
-                currentButton = menuBUT_Calendar;
-                currentButton.BackColor = currentButton.lineColor;
-
-                currentControl = Calendar;
                 currentControl.Dock = DockStyle.Fill;
 
                 mainPanel.Controls.Add(currentControl);

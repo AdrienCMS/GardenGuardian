@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PAC_APP_V2.Properties {
+namespace GardenGuardian.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

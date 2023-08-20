@@ -1,4 +1,4 @@
-﻿namespace PAC_APP_V2
+﻿namespace GardenGuardian
 {
     partial class MainForm
     {
@@ -31,12 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.menuBUT_Settings = new PAC_APP_V2.Controls.MenuButton();
-            this.menuBUT_Forecast = new PAC_APP_V2.Controls.MenuButton();
-            this.menuBUT_Calendar = new PAC_APP_V2.Controls.MenuButton();
-            this.menuBUT_Plants = new PAC_APP_V2.Controls.MenuButton();
-            this.menuBUT_Home = new PAC_APP_V2.Controls.MenuButton();
-            this.menuBUT_exit = new PAC_APP_V2.Controls.MenuButton();
+            this.menuBUT_Settings = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_Forecast = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_Plants = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_Home = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_exit = new GardenGuardian.Controls.MenuButton();
             this.PAN_Spacing_2 = new System.Windows.Forms.Panel();
             this.PICBOX_Logo = new System.Windows.Forms.PictureBox();
             this.PAN_Spacing_1 = new System.Windows.Forms.Panel();
@@ -56,7 +55,6 @@
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.menuPanel.Controls.Add(this.menuBUT_Settings);
             this.menuPanel.Controls.Add(this.menuBUT_Forecast);
-            this.menuPanel.Controls.Add(this.menuBUT_Calendar);
             this.menuPanel.Controls.Add(this.menuBUT_Plants);
             this.menuPanel.Controls.Add(this.menuBUT_Home);
             this.menuPanel.Controls.Add(this.menuBUT_exit);
@@ -78,7 +76,7 @@
             this.menuBUT_Settings.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.menuBUT_Settings.Label = "Configuration";
             this.menuBUT_Settings.lineColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(88)))), ((int)(((byte)(90)))));
-            this.menuBUT_Settings.Location = new System.Drawing.Point(0, 619);
+            this.menuBUT_Settings.Location = new System.Drawing.Point(0, 538);
             this.menuBUT_Settings.Logo = ((System.Drawing.Image)(resources.GetObject("menuBUT_Settings.Logo")));
             this.menuBUT_Settings.Name = "menuBUT_Settings";
             this.menuBUT_Settings.Size = new System.Drawing.Size(298, 81);
@@ -96,7 +94,7 @@
             this.menuBUT_Forecast.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.menuBUT_Forecast.Label = "Prévisions";
             this.menuBUT_Forecast.lineColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.menuBUT_Forecast.Location = new System.Drawing.Point(0, 538);
+            this.menuBUT_Forecast.Location = new System.Drawing.Point(0, 457);
             this.menuBUT_Forecast.Logo = ((System.Drawing.Image)(resources.GetObject("menuBUT_Forecast.Logo")));
             this.menuBUT_Forecast.Name = "menuBUT_Forecast";
             this.menuBUT_Forecast.Size = new System.Drawing.Size(298, 81);
@@ -104,24 +102,6 @@
             this.menuBUT_Forecast.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.menuBUT_Forecast.UseVisualStyleBackColor = true;
             this.menuBUT_Forecast.Click += new System.EventHandler(this.menuBUT_Forecast_Click);
-            // 
-            // menuBUT_Calendar
-            // 
-            this.menuBUT_Calendar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuBUT_Calendar.FlatAppearance.BorderSize = 0;
-            this.menuBUT_Calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuBUT_Calendar.Font = new System.Drawing.Font("Bahnschrift", 16F);
-            this.menuBUT_Calendar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.menuBUT_Calendar.Label = "Caldendrier";
-            this.menuBUT_Calendar.lineColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(46)))));
-            this.menuBUT_Calendar.Location = new System.Drawing.Point(0, 457);
-            this.menuBUT_Calendar.Logo = ((System.Drawing.Image)(resources.GetObject("menuBUT_Calendar.Logo")));
-            this.menuBUT_Calendar.Name = "menuBUT_Calendar";
-            this.menuBUT_Calendar.Size = new System.Drawing.Size(298, 81);
-            this.menuBUT_Calendar.TabIndex = 15;
-            this.menuBUT_Calendar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.menuBUT_Calendar.UseVisualStyleBackColor = true;
-            this.menuBUT_Calendar.Click += new System.EventHandler(this.menuBUT_Calendar_Click);
             // 
             // menuBUT_Plants
             // 
@@ -212,6 +192,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.AutoScroll = true;
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BackgroundImage = global::GardenGuardian.Properties.Resources.plantsBackground;
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainPanel.Location = new System.Drawing.Point(298, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1024, 762);
@@ -276,7 +259,6 @@
         private System.Windows.Forms.BindingSource airportBindingSource;
         private System.Windows.Forms.PictureBox PICBOX_Logo;
         private Controls.MenuButton menuBUT_Home;
-        private Controls.MenuButton menuBUT_Calendar;
         private Controls.MenuButton menuBUT_Plants;
         private Controls.MenuButton menuBUT_Settings;
         private Controls.MenuButton menuBUT_Forecast;

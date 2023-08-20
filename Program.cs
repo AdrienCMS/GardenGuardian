@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PAC_APP_V2
+namespace GardenGuardian
 {
     static class Program
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PAC_APP_V2.UserControls
+namespace GardenGuardian.UserControls
 {
     /// <summary>
     /// Panneau de visualisation des plantes enregistrées

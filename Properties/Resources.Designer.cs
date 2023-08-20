@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PAC_APP_V2.Properties {
+namespace GardenGuardian.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace PAC_APP_V2.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PAC_APP_V2.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GardenGuardian.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -76,6 +76,26 @@ namespace PAC_APP_V2.Properties {
         internal static System.Drawing.Bitmap airport {
             get {
                 object obj = ResourceManager.GetObject("airport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bigAdd {
+            get {
+                object obj = ResourceManager.GetObject("bigAdd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blueSkyGradient {
+            get {
+                object obj = ResourceManager.GetObject("blueSkyGradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +286,16 @@ namespace PAC_APP_V2.Properties {
         internal static System.Drawing.Bitmap paper_plane {
             get {
                 object obj = ResourceManager.GetObject("paper_plane", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plantsBackground {
+            get {
+                object obj = ResourceManager.GetObject("plantsBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

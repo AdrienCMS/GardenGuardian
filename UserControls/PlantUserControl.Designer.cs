@@ -1,4 +1,4 @@
-﻿namespace PAC_APP_V2.UserControls
+﻿namespace GardenGuardian.UserControls
 {
     partial class PlantUserControl
     {
@@ -32,7 +32,7 @@
             this.TS_Main = new System.Windows.Forms.ToolStrip();
             this.TSBUT_Add = new System.Windows.Forms.ToolStripButton();
             this.FLOWPAN_Plants = new System.Windows.Forms.FlowLayoutPanel();
-            this.plantsTableAdapter = new PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter();
+            this.plantsTableAdapter = new GardenGuardian.gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter();
             this.TS_Main.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             // 
             this.FLOWPAN_Plants.AutoScroll = true;
             this.FLOWPAN_Plants.AutoSize = true;
+            this.FLOWPAN_Plants.BackColor = System.Drawing.Color.Transparent;
             this.FLOWPAN_Plants.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLOWPAN_Plants.Location = new System.Drawing.Point(55, 0);
             this.FLOWPAN_Plants.Name = "FLOWPAN_Plants";
@@ -80,7 +81,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.FLOWPAN_Plants);
             this.Controls.Add(this.TS_Main);
             this.Name = "PlantUserControl";

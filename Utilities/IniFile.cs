@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace PAC_APP_V2.Utilities
+namespace GardenGuardian.Utilities
 {
     /// <summary>
     /// Classe relative à l'utilisation de fichiers ini

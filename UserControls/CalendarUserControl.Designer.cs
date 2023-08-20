@@ -1,4 +1,4 @@
-﻿namespace PAC_APP_V2.UserControls
+﻿namespace GardenGuardian.UserControls
 {
     partial class CalendarUserControl
     {
@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarUserControl));
+           
             this.SuspendLayout();
-            // 
             // CalendarUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.DoubleBuffered = true;
             this.Name = "CalendarUserControl";
             this.Size = new System.Drawing.Size(900, 500);
             this.ResumeLayout(false);
@@ -44,5 +43,6 @@
         }
 
         #endregion
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace PAC_APP_V2.UserControls
+﻿namespace GardenGuardian.UserControls
 {
     partial class PlantCard
     {

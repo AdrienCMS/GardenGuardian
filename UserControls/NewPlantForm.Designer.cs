@@ -1,4 +1,4 @@
-﻿namespace PAC_APP_V2.UserControls
+﻿namespace GardenGuardian.UserControls
 {
     partial class NewPlantForm
     {
@@ -42,7 +42,7 @@
             this.BUT_Browse = new System.Windows.Forms.Button();
             this.BUT_Insert = new System.Windows.Forms.Button();
             this.openImageDialog = new System.Windows.Forms.OpenFileDialog();
-            this.plantsTableAdapter = new PAC_APP_V2.gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter();
+            this.plantsTableAdapter = new GardenGuardian.gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_Plant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUMDD_Schedule)).BeginInit();

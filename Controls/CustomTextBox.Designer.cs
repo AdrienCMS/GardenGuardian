@@ -1,5 +1,5 @@
 ﻿
-namespace PAC_APP_V2.Controls
+namespace GardenGuardian.Controls
 {
     partial class CustomTextBox
     {
