@@ -25,19 +25,27 @@ namespace GardenGuardian.UserControls
             client.DataReceived += ClientReceivedData;
         }
 
-        private void BUT_Add_Click(object sender, EventArgs e)
-        {
-            client.SendRequest("Paris/France");
-
-        }
-
         private void ClientReceivedData(object sender, EventArgs e)
         {
             forecasts = client.GetForecast();
+            foreach(Forecast frcst in forecasts)
+            {
+                var weather = new WeatherCard(frcst);
 
-            var weather = new WeatherCard(forecasts[0]);
+                FLOWPAN_Forecast.Controls.Add(weather);
+            }
+            
+        }
 
-            FLOWPAN_Forecast.Controls.Add(weather);
+        private void ForecastUserControl_DoubleClick(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void FLOWPAN_Forecast_DoubleClick(object sender, EventArgs e)
+        {
+            client.SendRequest("Paris/France");
         }
     }
 }

@@ -40,7 +40,7 @@ namespace GardenGuardian.Utilities
                 using (HttpClient client = new HttpClient())
                 {
                     //Paramétrage de la requête
-                    ApiUrl += $"forecast.json?key={ApiKey}&q={location}&days=7&lang=fr";
+                    ApiUrl += $"forecast.json?key={ApiKey}&q={location}&days=7";
                     HttpResponseMessage response = await client.GetAsync(ApiUrl);
 
                     if (response.IsSuccessStatusCode)

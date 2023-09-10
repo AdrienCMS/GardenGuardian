@@ -28,25 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.menuBUT_Settings = new GardenGuardian.Controls.MenuButton();
-            this.menuBUT_Forecast = new GardenGuardian.Controls.MenuButton();
-            this.menuBUT_Plants = new GardenGuardian.Controls.MenuButton();
-            this.menuBUT_Home = new GardenGuardian.Controls.MenuButton();
-            this.menuBUT_exit = new GardenGuardian.Controls.MenuButton();
             this.PAN_Spacing_2 = new System.Windows.Forms.Panel();
             this.PICBOX_Logo = new System.Windows.Forms.PictureBox();
             this.PAN_Spacing_1 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.TS_Main = new System.Windows.Forms.ToolStrip();
             this.TSBUT_Licence = new System.Windows.Forms.ToolStripButton();
-            this.airportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuBUT_Settings = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_Forecast = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_Plants = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_Home = new GardenGuardian.Controls.MenuButton();
+            this.menuBUT_exit = new GardenGuardian.Controls.MenuButton();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_Logo)).BeginInit();
             this.TS_Main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.airportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -66,6 +63,70 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(298, 790);
             this.menuPanel.TabIndex = 0;
+            // 
+            // PAN_Spacing_2
+            // 
+            this.PAN_Spacing_2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PAN_Spacing_2.Location = new System.Drawing.Point(0, 259);
+            this.PAN_Spacing_2.Name = "PAN_Spacing_2";
+            this.PAN_Spacing_2.Size = new System.Drawing.Size(298, 36);
+            this.PAN_Spacing_2.TabIndex = 12;
+            // 
+            // PICBOX_Logo
+            // 
+            this.PICBOX_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PICBOX_Logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PICBOX_Logo.Image = ((System.Drawing.Image)(resources.GetObject("PICBOX_Logo.Image")));
+            this.PICBOX_Logo.Location = new System.Drawing.Point(0, 36);
+            this.PICBOX_Logo.Name = "PICBOX_Logo";
+            this.PICBOX_Logo.Size = new System.Drawing.Size(298, 223);
+            this.PICBOX_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PICBOX_Logo.TabIndex = 10;
+            this.PICBOX_Logo.TabStop = false;
+            this.PICBOX_Logo.Click += new System.EventHandler(this.PICBOX_Logo_Click);
+            // 
+            // PAN_Spacing_1
+            // 
+            this.PAN_Spacing_1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PAN_Spacing_1.Location = new System.Drawing.Point(0, 0);
+            this.PAN_Spacing_1.Name = "PAN_Spacing_1";
+            this.PAN_Spacing_1.Size = new System.Drawing.Size(298, 36);
+            this.PAN_Spacing_1.TabIndex = 11;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.AutoScroll = true;
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BackgroundImage = global::GardenGuardian.Properties.Resources.plantsBackground;
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.Location = new System.Drawing.Point(298, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1024, 762);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // TS_Main
+            // 
+            this.TS_Main.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TS_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSBUT_Licence});
+            this.TS_Main.Location = new System.Drawing.Point(298, 765);
+            this.TS_Main.Name = "TS_Main";
+            this.TS_Main.Size = new System.Drawing.Size(1024, 25);
+            this.TS_Main.TabIndex = 0;
+            // 
+            // TSBUT_Licence
+            // 
+            this.TSBUT_Licence.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.TSBUT_Licence.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBUT_Licence.Image = ((System.Drawing.Image)(resources.GetObject("TSBUT_Licence.Image")));
+            this.TSBUT_Licence.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBUT_Licence.Name = "TSBUT_Licence";
+            this.TSBUT_Licence.Size = new System.Drawing.Size(23, 22);
+            this.TSBUT_Licence.Text = "toolStripButton1";
+            this.TSBUT_Licence.Click += new System.EventHandler(this.toolStripBUT_Licence_Click);
             // 
             // menuBUT_Settings
             // 
@@ -157,70 +218,6 @@
             this.menuBUT_exit.UseVisualStyleBackColor = true;
             this.menuBUT_exit.Click += new System.EventHandler(this.menuBUT_exit_Click);
             // 
-            // PAN_Spacing_2
-            // 
-            this.PAN_Spacing_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PAN_Spacing_2.Location = new System.Drawing.Point(0, 259);
-            this.PAN_Spacing_2.Name = "PAN_Spacing_2";
-            this.PAN_Spacing_2.Size = new System.Drawing.Size(298, 36);
-            this.PAN_Spacing_2.TabIndex = 12;
-            // 
-            // PICBOX_Logo
-            // 
-            this.PICBOX_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PICBOX_Logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PICBOX_Logo.Image = ((System.Drawing.Image)(resources.GetObject("PICBOX_Logo.Image")));
-            this.PICBOX_Logo.Location = new System.Drawing.Point(0, 36);
-            this.PICBOX_Logo.Name = "PICBOX_Logo";
-            this.PICBOX_Logo.Size = new System.Drawing.Size(298, 223);
-            this.PICBOX_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PICBOX_Logo.TabIndex = 10;
-            this.PICBOX_Logo.TabStop = false;
-            this.PICBOX_Logo.Click += new System.EventHandler(this.PICBOX_Logo_Click);
-            // 
-            // PAN_Spacing_1
-            // 
-            this.PAN_Spacing_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PAN_Spacing_1.Location = new System.Drawing.Point(0, 0);
-            this.PAN_Spacing_1.Name = "PAN_Spacing_1";
-            this.PAN_Spacing_1.Size = new System.Drawing.Size(298, 36);
-            this.PAN_Spacing_1.TabIndex = 11;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.AutoScroll = true;
-            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
-            this.mainPanel.BackgroundImage = global::GardenGuardian.Properties.Resources.plantsBackground;
-            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mainPanel.Location = new System.Drawing.Point(298, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1024, 762);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // TS_Main
-            // 
-            this.TS_Main.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TS_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSBUT_Licence});
-            this.TS_Main.Location = new System.Drawing.Point(298, 765);
-            this.TS_Main.Name = "TS_Main";
-            this.TS_Main.Size = new System.Drawing.Size(1024, 25);
-            this.TS_Main.TabIndex = 0;
-            // 
-            // TSBUT_Licence
-            // 
-            this.TSBUT_Licence.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.TSBUT_Licence.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.TSBUT_Licence.Image = ((System.Drawing.Image)(resources.GetObject("TSBUT_Licence.Image")));
-            this.TSBUT_Licence.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TSBUT_Licence.Name = "TSBUT_Licence";
-            this.TSBUT_Licence.Size = new System.Drawing.Size(23, 22);
-            this.TSBUT_Licence.Text = "toolStripButton1";
-            this.TSBUT_Licence.Click += new System.EventHandler(this.toolStripBUT_Licence_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +238,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_Logo)).EndInit();
             this.TS_Main.ResumeLayout(false);
             this.TS_Main.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.airportBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +252,6 @@
         private System.Windows.Forms.ToolStripButton TSBUT_Licence;
         private System.Windows.Forms.Panel PAN_Spacing_1;
         private System.Windows.Forms.Panel PAN_Spacing_2;
-        private System.Windows.Forms.BindingSource airportBindingSource;
         private System.Windows.Forms.PictureBox PICBOX_Logo;
         private Controls.MenuButton menuBUT_Home;
         private Controls.MenuButton menuBUT_Plants;

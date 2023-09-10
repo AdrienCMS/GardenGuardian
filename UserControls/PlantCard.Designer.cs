@@ -30,15 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlantCard));
             this.LAYPAN_Main = new System.Windows.Forms.TableLayoutPanel();
+            this.TitleLAB_Machine = new System.Windows.Forms.Label();
             this.TitleLAB_PlantName = new System.Windows.Forms.Label();
             this.TitleLAB_LastWatering = new System.Windows.Forms.Label();
             this.TitleLAB_WateringSchedule = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PICBOX_Plant = new System.Windows.Forms.PictureBox();
-            this.BUT_Delete = new System.Windows.Forms.Button();
-            this.BUT_edit = new System.Windows.Forms.Button();
             this.LAB_PlantName = new System.Windows.Forms.Label();
             this.LAB_LastWatering = new System.Windows.Forms.Label();
+            this.LAB_Machine = new System.Windows.Forms.Label();
+            this.BUT_Delete = new System.Windows.Forms.Button();
+            this.BUT_Stats = new System.Windows.Forms.Button();
             this.LAB_Schedule = new System.Windows.Forms.Label();
             this.LAYPAN_Main.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -52,17 +54,19 @@
             this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.LAYPAN_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.LAYPAN_Main.Controls.Add(this.TitleLAB_Machine, 0, 4);
             this.LAYPAN_Main.Controls.Add(this.TitleLAB_PlantName, 2, 1);
             this.LAYPAN_Main.Controls.Add(this.TitleLAB_LastWatering, 2, 2);
             this.LAYPAN_Main.Controls.Add(this.TitleLAB_WateringSchedule, 2, 3);
             this.LAYPAN_Main.Controls.Add(this.MainPanel, 0, 0);
-            this.LAYPAN_Main.Controls.Add(this.BUT_Delete, 4, 4);
-            this.LAYPAN_Main.Controls.Add(this.BUT_edit, 5, 4);
             this.LAYPAN_Main.Controls.Add(this.LAB_PlantName, 3, 1);
             this.LAYPAN_Main.Controls.Add(this.LAB_LastWatering, 3, 2);
+            this.LAYPAN_Main.Controls.Add(this.LAB_Machine, 3, 4);
+            this.LAYPAN_Main.Controls.Add(this.BUT_Delete, 5, 4);
+            this.LAYPAN_Main.Controls.Add(this.BUT_Stats, 4, 4);
             this.LAYPAN_Main.Controls.Add(this.LAB_Schedule, 3, 3);
             this.LAYPAN_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LAYPAN_Main.Location = new System.Drawing.Point(0, 0);
@@ -76,6 +80,18 @@
             this.LAYPAN_Main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.LAYPAN_Main.Size = new System.Drawing.Size(748, 207);
             this.LAYPAN_Main.TabIndex = 0;
+            // 
+            // TitleLAB_Machine
+            // 
+            this.TitleLAB_Machine.AutoSize = true;
+            this.TitleLAB_Machine.Dock = System.Windows.Forms.DockStyle.Right;
+            this.TitleLAB_Machine.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLAB_Machine.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TitleLAB_Machine.Location = new System.Drawing.Point(302, 148);
+            this.TitleLAB_Machine.Name = "TitleLAB_Machine";
+            this.TitleLAB_Machine.Size = new System.Drawing.Size(95, 46);
+            this.TitleLAB_Machine.TabIndex = 8;
+            this.TitleLAB_Machine.Text = "IP machine :";
             // 
             // TitleLAB_PlantName
             // 
@@ -141,29 +157,6 @@
             this.PICBOX_Plant.TabStop = false;
             this.PICBOX_Plant.Click += new System.EventHandler(this.PICBOX_Plant_Click);
             // 
-            // BUT_Delete
-            // 
-            this.BUT_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BUT_Delete.ForeColor = System.Drawing.Color.Maroon;
-            this.BUT_Delete.Location = new System.Drawing.Point(601, 151);
-            this.BUT_Delete.Name = "BUT_Delete";
-            this.BUT_Delete.Size = new System.Drawing.Size(64, 29);
-            this.BUT_Delete.TabIndex = 1;
-            this.BUT_Delete.Text = "Supprimer";
-            this.BUT_Delete.UseVisualStyleBackColor = true;
-            this.BUT_Delete.Click += new System.EventHandler(this.BUT_Delete_Click);
-            // 
-            // BUT_edit
-            // 
-            this.BUT_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BUT_edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(46)))));
-            this.BUT_edit.Location = new System.Drawing.Point(671, 151);
-            this.BUT_edit.Name = "BUT_edit";
-            this.BUT_edit.Size = new System.Drawing.Size(64, 29);
-            this.BUT_edit.TabIndex = 0;
-            this.BUT_edit.Text = "Modifier";
-            this.BUT_edit.UseVisualStyleBackColor = true;
-            // 
             // LAB_PlantName
             // 
             this.LAB_PlantName.AutoSize = true;
@@ -187,6 +180,44 @@
             this.LAB_LastWatering.Size = new System.Drawing.Size(55, 21);
             this.LAB_LastWatering.TabIndex = 6;
             this.LAB_LastWatering.Text = "label2";
+            // 
+            // LAB_Machine
+            // 
+            this.LAB_Machine.AutoSize = true;
+            this.LAB_Machine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LAB_Machine.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LAB_Machine.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LAB_Machine.Location = new System.Drawing.Point(403, 148);
+            this.LAB_Machine.Name = "LAB_Machine";
+            this.LAB_Machine.Size = new System.Drawing.Size(55, 21);
+            this.LAB_Machine.TabIndex = 9;
+            this.LAB_Machine.Text = "label3";
+            // 
+            // BUT_Delete
+            // 
+            this.BUT_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BUT_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BUT_Delete.ForeColor = System.Drawing.Color.Maroon;
+            this.BUT_Delete.Location = new System.Drawing.Point(661, 151);
+            this.BUT_Delete.Name = "BUT_Delete";
+            this.BUT_Delete.Size = new System.Drawing.Size(74, 40);
+            this.BUT_Delete.TabIndex = 1;
+            this.BUT_Delete.Text = "Supprimer";
+            this.BUT_Delete.UseVisualStyleBackColor = true;
+            this.BUT_Delete.Click += new System.EventHandler(this.BUT_Delete_Click);
+            // 
+            // BUT_Stats
+            // 
+            this.BUT_Stats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BUT_Stats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BUT_Stats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(84)))), ((int)(((byte)(46)))));
+            this.BUT_Stats.Location = new System.Drawing.Point(581, 151);
+            this.BUT_Stats.Name = "BUT_Stats";
+            this.BUT_Stats.Size = new System.Drawing.Size(74, 40);
+            this.BUT_Stats.TabIndex = 0;
+            this.BUT_Stats.Text = "Statistiques";
+            this.BUT_Stats.UseVisualStyleBackColor = true;
+            this.BUT_Stats.Click += new System.EventHandler(this.BUT_edit_Click);
             // 
             // LAB_Schedule
             // 
@@ -227,12 +258,14 @@
         private System.Windows.Forms.Label TitleLAB_PlantName;
         private System.Windows.Forms.Label TitleLAB_LastWatering;
         private System.Windows.Forms.Label TitleLAB_WateringSchedule;
-        private System.Windows.Forms.Button BUT_edit;
+        private System.Windows.Forms.Button BUT_Stats;
         private System.Windows.Forms.Button BUT_Delete;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.PictureBox PICBOX_Plant;
         private System.Windows.Forms.Label LAB_PlantName;
         private System.Windows.Forms.Label LAB_LastWatering;
         private System.Windows.Forms.Label LAB_Schedule;
+        private System.Windows.Forms.Label TitleLAB_Machine;
+        private System.Windows.Forms.Label LAB_Machine;
     }
 }

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPlantForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.LAB_MachineIp = new System.Windows.Forms.Label();
             this.PICBOX_Plant = new System.Windows.Forms.PictureBox();
             this.LAB_PlantName = new System.Windows.Forms.Label();
             this.LAB_Schedule = new System.Windows.Forms.Label();
@@ -38,14 +40,20 @@
             this.DTP_LastWatering = new System.Windows.Forms.DateTimePicker();
             this.NUMDD_Schedule = new System.Windows.Forms.NumericUpDown();
             this.CBOX_WeekMonth = new System.Windows.Forms.ComboBox();
+            this.CBOX_Machine = new System.Windows.Forms.ComboBox();
+            this.machineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gardenguardian_databaseDataSet = new GardenGuardian.gardenguardian_databaseDataSet();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.BUT_Browse = new System.Windows.Forms.Button();
             this.BUT_Insert = new System.Windows.Forms.Button();
             this.openImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.plantsTableAdapter = new GardenGuardian.gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter();
+            this.machineTableAdapter = new GardenGuardian.gardenguardian_databaseDataSetTableAdapters.machineTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_Plant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUMDD_Schedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.machineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gardenguardian_databaseDataSet)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +66,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.tableLayoutPanel1.Controls.Add(this.LAB_MachineIp, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.PICBOX_Plant, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.LAB_PlantName, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.LAB_Schedule, 2, 2);
@@ -66,6 +75,7 @@
             this.tableLayoutPanel1.Controls.Add(this.DTP_LastWatering, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.NUMDD_Schedule, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.CBOX_WeekMonth, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.CBOX_Machine, 3, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -78,6 +88,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(904, 406);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // LAB_MachineIp
+            // 
+            this.LAB_MachineIp.AutoSize = true;
+            this.LAB_MachineIp.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LAB_MachineIp.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LAB_MachineIp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LAB_MachineIp.Location = new System.Drawing.Point(544, 247);
+            this.LAB_MachineIp.Name = "LAB_MachineIp";
+            this.LAB_MachineIp.Size = new System.Drawing.Size(79, 79);
+            this.LAB_MachineIp.TabIndex = 8;
+            this.LAB_MachineIp.Text = "Machine :";
             // 
             // PICBOX_Plant
             // 
@@ -161,6 +183,29 @@
             this.CBOX_WeekMonth.Size = new System.Drawing.Size(126, 21);
             this.CBOX_WeekMonth.TabIndex = 7;
             // 
+            // CBOX_Machine
+            // 
+            this.CBOX_Machine.DataSource = this.machineBindingSource;
+            this.CBOX_Machine.DisplayMember = "machine_ip";
+            this.CBOX_Machine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CBOX_Machine.FormattingEnabled = true;
+            this.CBOX_Machine.Location = new System.Drawing.Point(629, 250);
+            this.CBOX_Machine.Name = "CBOX_Machine";
+            this.CBOX_Machine.Size = new System.Drawing.Size(126, 21);
+            this.CBOX_Machine.TabIndex = 9;
+            this.CBOX_Machine.ValueMember = "machine_id";
+            this.CBOX_Machine.SelectedIndexChanged += new System.EventHandler(this.CBOX_Machine_SelectedIndexChanged);
+            // 
+            // machineBindingSource
+            // 
+            this.machineBindingSource.DataMember = "machine";
+            this.machineBindingSource.DataSource = this.gardenguardian_databaseDataSet;
+            // 
+            // gardenguardian_databaseDataSet
+            // 
+            this.gardenguardian_databaseDataSet.DataSetName = "gardenguardian_databaseDataSet";
+            this.gardenguardian_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 7;
@@ -222,6 +267,10 @@
             // 
             this.plantsTableAdapter.ClearBeforeFill = true;
             // 
+            // machineTableAdapter
+            // 
+            this.machineTableAdapter.ClearBeforeFill = true;
+            // 
             // NewPlantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,10 +282,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewPlantForm";
             this.Text = "Ajouter une plante";
+            this.Load += new System.EventHandler(this.NewPlantForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_Plant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUMDD_Schedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.machineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gardenguardian_databaseDataSet)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -258,5 +310,10 @@
         private System.Windows.Forms.ComboBox CBOX_WeekMonth;
         private System.Windows.Forms.OpenFileDialog openImageDialog;
         private gardenguardian_databaseDataSetTableAdapters.plantsTableAdapter plantsTableAdapter;
+        private System.Windows.Forms.Label LAB_MachineIp;
+        private System.Windows.Forms.ComboBox CBOX_Machine;
+        private gardenguardian_databaseDataSet gardenguardian_databaseDataSet;
+        private System.Windows.Forms.BindingSource machineBindingSource;
+        private gardenguardian_databaseDataSetTableAdapters.machineTableAdapter machineTableAdapter;
     }
 }

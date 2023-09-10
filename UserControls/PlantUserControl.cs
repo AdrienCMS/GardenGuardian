@@ -16,12 +16,16 @@ namespace GardenGuardian.UserControls
     public partial class PlantUserControl : UserControl
     {
         /// <summary>
+        /// Formulaire dans lequel on insèrera les nouvelles plantes
+        /// </summary>
+        NewPlantForm newPlantForm = new NewPlantForm();
+        /// <summary>
         /// Constructeur du panneau
         /// </summary>
         public PlantUserControl()
         {
             InitializeComponent();
-            
+            newPlantForm.BUT_Save_Click += NewPlantForm_Closed;
         }
 
         /// <summary>
@@ -32,9 +36,28 @@ namespace GardenGuardian.UserControls
         /// <param name="e"></param>
         private void TSBUT_Add_Click(object sender, EventArgs e)
         {
-            var newPlant = new PlantCard(); newPlant.isDestroyed += destroyPlantCard;
+            //Si il n'est pas déjà visible
+            if (!formOpen(newPlantForm.Name))
+            {
+                //On affiche le formulaire
+                newPlantForm.Show();
+                
+            }
+            else
+            {
 
-            this.FLOWPAN_Plants.Controls.Add(newPlant);
+            } 
+        }
+
+        /// <summary>
+        /// Délégué appelé lorsque l'utilisateur apppuie sur le bouton "enregistrer"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NewPlantForm_Closed(Object sender, EventArgs e)
+        {
+            reLoad();
+         
         }
 
         /// <summary>
@@ -54,10 +77,11 @@ namespace GardenGuardian.UserControls
         private void reLoad()
         {
             DataTable plants = this.plantsTableAdapter.GetData();
-
+            FLOWPAN_Plants.Controls.Clear();
             foreach(DataRow plant in plants.Rows)
             {
                 var newPlant = new PlantCard(plant);
+                newPlant.statsRequested += displayPlantStats;
                 newPlant.isDestroyed += destroyPlantCard;
 
                this.FLOWPAN_Plants.Controls.Add(newPlant);
@@ -65,6 +89,34 @@ namespace GardenGuardian.UserControls
             }
         }
 
+        /// <summary>
+        /// Permet de vérifier si un formulaire est ouvert
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        private bool formOpen(string name)
+        {
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm.Name == name)
+                {
+                    return true; // Vous pouvez quitter la boucle dès que le formulaire est trouvé
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Ouvre un formulaire affichant les statistiques de la plante
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void displayPlantStats(object sender, EventArgs e)
+        {
+            PlantCard plantCardSender = (PlantCard)sender;
+            PlantStats plantstatsForm = new PlantStats(plantCardSender);
+            plantstatsForm.Show();
+        }
 
         /// <summary>
         /// Détruit la carte plante qui à déclenché l'évenement
@@ -73,7 +125,6 @@ namespace GardenGuardian.UserControls
         /// <param name="e"></param>
         private void destroyPlantCard(object sender, EventArgs e)
         {
-
             FLOWPAN_Plants.Controls.Remove((UserControl)(sender));
         }
 

@@ -31,6 +31,7 @@ namespace GardenGuardian.UserControls
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeUserControl));
             this.IMG_Panel = new System.Windows.Forms.Panel();
+            this.FLOWPAN_Schedule = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // IMG_Panel
@@ -39,10 +40,22 @@ namespace GardenGuardian.UserControls
             this.IMG_Panel.BackColor = System.Drawing.Color.Transparent;
             this.IMG_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IMG_Panel.BackgroundImage")));
             this.IMG_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IMG_Panel.Location = new System.Drawing.Point(542, 358);
+            this.IMG_Panel.Location = new System.Drawing.Point(542, 361);
             this.IMG_Panel.Name = "IMG_Panel";
             this.IMG_Panel.Size = new System.Drawing.Size(464, 204);
             this.IMG_Panel.TabIndex = 3;
+            // 
+            // FLOWPAN_Schedule
+            // 
+            this.FLOWPAN_Schedule.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FLOWPAN_Schedule.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FLOWPAN_Schedule.Location = new System.Drawing.Point(0, 0);
+            this.FLOWPAN_Schedule.Name = "FLOWPAN_Schedule";
+            this.FLOWPAN_Schedule.Size = new System.Drawing.Size(536, 565);
+            this.FLOWPAN_Schedule.TabIndex = 4;
+            this.FLOWPAN_Schedule.Paint += new System.Windows.Forms.PaintEventHandler(this.FLOWPAN_Schedule_Paint);
             // 
             // HomeUserControl
             // 
@@ -50,6 +63,7 @@ namespace GardenGuardian.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.FLOWPAN_Schedule);
             this.Controls.Add(this.IMG_Panel);
             this.Name = "HomeUserControl";
             this.Size = new System.Drawing.Size(1009, 565);
@@ -59,5 +73,6 @@ namespace GardenGuardian.UserControls
 
         #endregion
         private System.Windows.Forms.Panel IMG_Panel;
+        private System.Windows.Forms.FlowLayoutPanel FLOWPAN_Schedule;
     }
 }

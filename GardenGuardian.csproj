@@ -90,7 +90,7 @@
       <HintPath>packages\SSH.NET.2020.0.2\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -206,6 +206,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -238,6 +239,9 @@
     <Compile Include="Controls\MenuButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="gardenguardian_databaseDataSet.cs">
+      <DependentUpon>gardenguardian_databaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="gardenguardian_databaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -256,12 +260,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CalendarUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\CalendarUserControl.Designer.cs">
-      <DependentUpon>CalendarUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ForecastUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -273,6 +271,12 @@
     </Compile>
     <Compile Include="UserControls\HomeUserControl.Designer.cs">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\message.Designer.cs">
+      <DependentUpon>message.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\NewPlantForm.cs">
       <SubType>Form</SubType>
@@ -286,11 +290,11 @@
     <Compile Include="UserControls\PlantCard.Designer.cs">
       <DependentUpon>PlantCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\plantStats.cs">
+    <Compile Include="UserControls\PlantStats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\plantStats.Designer.cs">
-      <DependentUpon>plantStats.cs</DependentUpon>
+    <Compile Include="UserControls\PlantStats.Designer.cs">
+      <DependentUpon>PlantStats.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PlantUserControl.cs">
       <SubType>UserControl</SubType>
@@ -312,6 +316,7 @@
     </Compile>
     <Compile Include="Utilities\Error.cs" />
     <Compile Include="Utilities\IniFile.cs" />
+    <Compile Include="Utilities\SocketServer.cs" />
     <Compile Include="Utilities\Utility.cs" />
     <Compile Include="Utilities\WeatherClient.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -322,14 +327,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CalendarUserControl.resx">
-      <DependentUpon>CalendarUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ForecastUserControl.resx">
       <DependentUpon>ForecastUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\message.resx">
+      <DependentUpon>message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\NewPlantForm.resx">
       <DependentUpon>NewPlantForm.cs</DependentUpon>
@@ -337,8 +342,8 @@
     <EmbeddedResource Include="UserControls\PlantCard.resx">
       <DependentUpon>PlantCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\plantStats.resx">
-      <DependentUpon>plantStats.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\PlantStats.resx">
+      <DependentUpon>PlantStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PlantUserControl.resx">
       <DependentUpon>PlantUserControl.cs</DependentUpon>

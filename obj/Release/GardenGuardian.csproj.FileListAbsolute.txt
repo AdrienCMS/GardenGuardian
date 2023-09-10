@@ -149,7 +149,6 @@ C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\bin\Re
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\bin\Release\System.Text.Json.xml
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.csproj.App.config
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.MainForm.resources
-C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.UserControls.CalendarUserControl.resources
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.UserControls.ForecastUserControl.resources
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.UserControls.HomeUserControl.resources
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.UserControls.NewPlantForm.resources
@@ -166,4 +165,5 @@ C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\bin\Re
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\bin\Release\GardenGuardian.pdb
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.exe
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.pdb
+C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.UserControls.message.resources
 C:\Users\adrie\Documents\VS Project\GardenGuardian_Project\GardenGuardian\obj\Release\GardenGuardian.csproj.AssemblyReference.cache
